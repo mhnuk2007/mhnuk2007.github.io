@@ -52,37 +52,44 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="py-16 px-6 bg-gray-800">
-        <h2 className="text-3xl font-semibold text-center mb-10 text-blue-400">My Projects</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {repos.length === 0 ? (
-            <p className="text-center text-gray-400 col-span-full">Loading...</p>
-          ) : (
-            repos.map((repo) => (
-              <div key={repo.id} className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700">
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:underline"
-                  >
-                    {repo.name}
-                  </a>
-                </h3>
-                <p className="text-gray-400 mb-4">
-                  {repo.description ? repo.description : "No description available"}
-                </p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>⭐ {repo.stargazers_count}</span>
-                  <span>Forks: {repo.forks_count}</span>
-                </div>
-              </div>
-            ))
-          )}
+{/* Projects */}
+<section id="projects" className="py-20 px-6 bg-[#1a1a2e]">
+  <h2 className="text-4xl font-bold text-center mb-12 text-[#00bcd4] tracking-wide">
+    My Projects
+  </h2>
+
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+    {repos.length === 0 ? (
+      <p className="text-center text-gray-400 col-span-full">Loading...</p>
+    ) : (
+      repos.map((repo) => (
+        <div
+          key={repo.id}
+          className="bg-[#16213e] p-6 rounded-xl shadow-lg border border-[#293462] hover:shadow-[#00bcd4]/40 transition-shadow duration-300"
+        >
+          <h3 className="text-2xl font-semibold mb-3 text-white">
+            <a
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#00bcd4] hover:underline"
+            >
+              {repo.name}
+            </a>
+          </h3>
+          <p className="text-gray-300 mb-5">
+            {repo.description ? repo.description : "No description available"}
+          </p>
+          <div className="flex justify-between text-sm text-gray-400">
+            <span>⭐ {repo.stargazers_count}</span>
+            <span>Forks: {repo.forks_count}</span>
+          </div>
         </div>
-      </section>
+      ))
+    )}
+  </div>
+</section>
+
 
       {/* Contact */}
       <section id="contact" className="py-16 px-6 text-center">
