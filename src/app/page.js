@@ -11,6 +11,10 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <div className="bg-[#0f172a] text-gray-100 min-h-screen font-sans leading-relaxed tracking-wide">
+    <Head>
+        <meta name="google-site-verification" content="XxlM4WYjht7yWIOupK_FfJ-69vi7BhFQc8aaYk-kKyY" />
+        <title>Your Portfolio</title>
+      </Head>
 
       <Navbar />
       <Hero />
