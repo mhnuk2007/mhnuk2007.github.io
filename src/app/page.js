@@ -1,4 +1,4 @@
-'use client'; // Mark this file as a client component
+'use client';
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -20,45 +20,58 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen font-sans">
+    <div className="bg-gray-900 text-gray-100 min-h-screen font-sans">
+      {/* Navbar */}
+      <nav className="bg-gray-800 px-6 py-4 shadow-md sticky top-0 z-50">
+        <div className="flex justify-between items-center max-w-6xl mx-auto">
+          <h1 className="text-2xl font-bold text-white">Mohan Lal</h1>
+          <div className="space-x-6">
+            <a href="#about" className="hover:text-blue-400 transition">About</a>
+            <a href="#projects" className="hover:text-blue-400 transition">Projects</a>
+            <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
+            <a href="https://github.com/mhnuk2007" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">GitHub</a>
+          </div>
+        </div>
+      </nav>
+
       {/* Header */}
-      <header className="bg-blue-600 text-white py-10 text-center">
-        <h1 className="text-4xl font-bold">Mohan Lal</h1>
-        <p className="text-xl mt-2">Java Backend Developer | Full Stack Enthusiast</p>
-        <p className="mt-4 text-lg">
-          Welcome to my professional portfolio! Below are some of my GitHub repositories and projects.
+      <header className="text-center py-16 bg-gradient-to-r from-gray-800 to-gray-700">
+        <h2 className="text-4xl font-bold">Java Backend Developer</h2>
+        <p className="mt-3 text-xl text-gray-300">Full Stack Enthusiast | Cloud Learner</p>
+        <p className="mt-6 max-w-2xl mx-auto text-gray-400">
+          Welcome to my portfolio! Explore my GitHub repositories and get to know my work and passion for backend development.
         </p>
       </header>
 
       {/* About */}
-      <section className="p-10 text-center">
-        <h2 className="text-3xl font-semibold mb-6">About Me</h2>
-        <p className="text-lg max-w-2xl mx-auto">
-          I&apos;m a passionate Java Backend Developer with experience in Spring Boot, Hibernate, and cloud technologies.
-          I enjoy building scalable and secure applications, and I continuously strive to improve my skills.
+      <section id="about" className="py-16 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-6 text-blue-400">About Me</h2>
+        <p className="text-lg max-w-2xl mx-auto text-gray-300">
+          I&apos;m a passionate Java Backend Developer with hands-on experience in Spring Boot, Hibernate, REST APIs, MySQL, and Cloud tools.
+          I love building scalable, secure applications and constantly exploring new technologies.
         </p>
       </section>
 
       {/* Projects */}
-      <section className="bg-white py-10 px-6">
-        <h2 className="text-3xl font-semibold text-center mb-6">My Projects</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <section id="projects" className="py-16 px-6 bg-gray-800">
+        <h2 className="text-3xl font-semibold text-center mb-10 text-blue-400">My Projects</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {repos.length === 0 ? (
-            <p className="text-center">Loading...</p>
+            <p className="text-center text-gray-400 col-span-full">Loading...</p>
           ) : (
             repos.map((repo) => (
-              <div key={repo.id} className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-2">
+              <div key={repo.id} className="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700">
+                <h3 className="text-xl font-semibold mb-2 text-white">
                   <a
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
+                    className="text-blue-400 hover:underline"
                   >
                     {repo.name}
                   </a>
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-400 mb-4">
                   {repo.description ? repo.description : "No description available"}
                 </p>
                 <div className="flex justify-between text-sm text-gray-500">
@@ -72,15 +85,15 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="p-10 text-center bg-gray-200">
-        <h2 className="text-3xl font-semibold mb-6">Contact Me</h2>
-        <p className="text-lg mb-4">Feel free to reach out to me via LinkedIn or GitHub.</p>
-        <div className="flex justify-center gap-6">
+      <section id="contact" className="py-16 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-6 text-blue-400">Contact Me</h2>
+        <p className="text-lg mb-4 text-gray-300">Let&apos;s connect on LinkedIn or GitHub.</p>
+        <div className="flex justify-center gap-8">
           <a
             href="https://www.linkedin.com/in/mohan-lal-b79790126/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 text-xl"
+            className="text-blue-400 text-xl hover:underline"
           >
             LinkedIn
           </a>
@@ -88,7 +101,7 @@ export default function Home() {
             href="https://github.com/mhnuk2007"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 text-xl"
+            className="text-blue-400 text-xl hover:underline"
           >
             GitHub
           </a>
@@ -96,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 text-center">
+      <footer className="bg-gray-800 text-gray-400 py-6 text-center border-t border-gray-700">
         <p>&copy; 2025 Mohan Lal. All Rights Reserved.</p>
       </footer>
     </div>
