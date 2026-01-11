@@ -47,6 +47,20 @@ export default function Contact() {
           </a>
         </div>
 
+        <div className="mt-16 text-center">
+          <h3 className="text-xl font-bold text-slate-200 mb-6">Preferred Stack</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['Java', 'Spring Boot', 'AWS', 'Angular'].map((tech) => (
+              <span
+                key={tech}
+                className="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-brand-primary rounded-full border border-slate-800 hover:border-brand-primary/30 transition-all cursor-default"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

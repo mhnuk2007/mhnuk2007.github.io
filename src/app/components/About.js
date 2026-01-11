@@ -61,7 +61,7 @@ export default function About() {
             <div className="card-base p-6 col-span-1 sm:col-span-2">
               <h4 className="text-slate-300 font-semibold mb-3">Core Focus</h4>
               <div className="flex flex-wrap gap-2">
-                {['Spring Boot', 'Microservices', 'System Design', 'DevOps'].map(tag => (
+                {['Spring Boot', 'Microservices', 'Angular', 'System Design', 'DevOps'].map(tag => (
                   <span key={tag} className="px-3 py-1 bg-slate-800 text-slate-300 text-xs font-medium rounded-full border border-slate-700">
                     {tag}
                   </span>
