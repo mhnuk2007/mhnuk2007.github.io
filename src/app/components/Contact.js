@@ -5,70 +5,48 @@ export default function Contact() {
     <section id="contact" className="section-spacing bg-slate-950">
       <div className="container-width max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-100 mb-4">Get In Touch</h2>
+          <h2 className="text-3xl font-bold text-slate-100 mb-4">Connect With Me</h2>
           <p className="text-slate-400">
-            For professional inquiries, please send an email or connect via LinkedIn.
+            I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
         </div>
 
-        <div className="card-base p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-12">
-
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-slate-200 mb-4">Contact Information</h3>
-                <div className="space-y-4">
-                  <a href="#" className="flex items-center gap-3 text-slate-400 hover:text-brand-primary transition-colors">
-                    <span className="text-lg">✉️</span>
-                    <span>Mohan Lal</span>
-                  </a>
-                  <a href="https://www.linkedin.com/in/mhnuk2007/" className="flex items-center gap-3 text-slate-400 hover:text-brand-primary transition-colors">
-                    <span className="text-lg">💼</span>
-                    <span>https://www.linkedin.com/in/mhnuk2007/</span>
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Preferred Stack</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-slate-900 text-slate-400 rounded-full text-xs border border-slate-800">Java</span>
-                  <span className="px-3 py-1 bg-slate-900 text-slate-400 rounded-full text-xs border border-slate-800">Spring Boot</span>
-                  <span className="px-3 py-1 bg-slate-900 text-slate-400 rounded-full text-xs border border-slate-800">AWS</span>
-                </div>
-              </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* LinkedIn Card */}
+          <a
+            href="https://www.linkedin.com/in/mhnuk2007/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-base p-8 group hover:bg-[#0077b5]/10 hover:border-[#0077b5]/50 flex flex-col items-center justify-center text-center transition-all duration-300"
+          >
+            <div className="w-16 h-16 mb-6 text-slate-300 group-hover:text-[#0077b5] transition-colors">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
             </div>
+            <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-[#0077b5]">LinkedIn</h3>
+            <p className="text-slate-400 text-sm">Professional Profile</p>
+          </a>
 
-            {/* Simple Form Placeholder (since explicit backend isn't set up, mailto is better or visual form) */}
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-400">Name</label>
-                <input
-                  type="text"
-                  disabled
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition-all cursor-not-allowed opacity-70"
-                  placeholder="Contact form disabled (Demo)"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-400">Message</label>
-                <textarea
-                  rows="4"
-                  disabled
-                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-200 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary outline-none transition-all cursor-not-allowed opacity-70"
-                  placeholder="Please use email to reach out."
-                ></textarea>
-              </div>
-              <a
-                href="mailto:mohan.lal@example.com"
-                className="block w-full text-center bg-slate-200 hover:bg-white text-slate-900 font-bold py-3 rounded-lg transition-all"
-              >
-                Send Email
-              </a>
-            </form>
-          </div>
+          {/* GitHub Card */}
+          <a
+            href="https://github.com/mhnuk2007"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-base p-8 group hover:bg-white/5 hover:border-white/20 flex flex-col items-center justify-center text-center transition-all duration-300"
+          >
+            <div className="w-16 h-16 mb-6 text-slate-300 group-hover:text-white transition-colors">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.921.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-white">GitHub</h3>
+            <p className="text-slate-400 text-sm">Code & Contributions</p>
+          </a>
         </div>
+
       </div>
     </section>
   );

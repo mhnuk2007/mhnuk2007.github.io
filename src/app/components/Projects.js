@@ -32,7 +32,7 @@ export default function Projects() {
               A selection of my recent open-source work and experiments. View full portfolio on GitHub.
             </p>
           </div>
-          <a h
+          <a
             href="https://github.com/mhnuk2007"
             target="_blank"
             rel="noopener noreferrer"
