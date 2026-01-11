@@ -50,10 +50,8 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#0a0a0f" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} bg-slate-950 text-slate-200`}>
+        {children}
       </body>
     </html>
   );

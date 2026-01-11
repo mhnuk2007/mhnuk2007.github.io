@@ -1,161 +1,72 @@
 'use client';
 
-import ScrollReveal from './ScrollReveal';
-
 export default function Skills() {
     const skillCategories = [
         {
-            title: 'Backend Development',
-            icon: '⚙️',
-            color: '#10B981',
-            skills: [
-                { name: 'Java', level: 90 },
-                { name: 'Spring Boot', level: 85 },
-                { name: 'Spring AI', level: 70 },
-                { name: 'PostgreSQL', level: 80 },
-                { name: 'MySQL', level: 80 },
-                { name: 'pgvector', level: 65 },
-                { name: 'REST APIs', level: 90 },
-                { name: 'Microservices', level: 80 },
-            ],
+            title: 'Backend Engineering',
+            description: 'Building robust, scalable server-side applications.',
+            skills: ['Java 21', 'Spring Boot 3', 'Microservices', 'Hibernate/JPA', 'PostgreSQL', 'Redis', 'Kafka'],
+            icon: '⚙️'
         },
         {
             title: 'Frontend Development',
-            icon: '🎨',
-            color: '#6366F1',
-            skills: [
-                { name: 'Angular', level: 80 },
-                { name: 'HTML5', level: 90 },
-                { name: 'CSS3', level: 85 },
-                { name: 'JavaScript', level: 85 },
-                { name: 'TypeScript', level: 80 },
-                { name: 'Responsive Design', level: 85 },
-            ],
+            description: 'Creating responsive, accessible user interfaces.',
+            skills: ['Angular', 'Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'RxJS'],
+            icon: '⚛️'
         },
         {
             title: 'Cloud & DevOps',
-            icon: '☁️',
-            color: '#FF9900',
-            skills: [
-                { name: 'AWS', level: 75 },
-                { name: 'Azure', level: 70 },
-                { name: 'Docker', level: 80 },
-                { name: 'Kubernetes', level: 65 },
-                { name: 'Terraform', level: 60 },
-                { name: 'CI/CD', level: 75 },
-            ],
+            description: 'Automating deployment and managing infrastructure.',
+            skills: ['AWS (EC2, S3, RDS)', 'Docker', 'Kubernetes', 'CI/CD (GitHub Actions)', 'Terraform', 'Linux'],
+            icon: '☁️'
         },
         {
-            title: 'AI & Emerging Tech',
-            icon: '🤖',
-            color: '#8B5CF6',
-            skills: [
-                { name: 'Embeddings', level: 70 },
-                { name: 'Semantic Search', level: 70 },
-                { name: 'Cosine Similarity', level: 65 },
-                { name: 'Memory Advisors', level: 60 },
-                { name: 'RAG Systems', level: 65 },
-            ],
+            title: 'AI & Data',
+            description: 'Integrating intelligence into applications.',
+            skills: ['LangChain', 'Spring AI', 'Vector Databases (pgvector)', 'RAG Pipelines', 'OpenAI API'],
+            icon: '🤖'
         },
     ];
 
     return (
-        <section id="skills" className="section" style={{ background: 'var(--bg-primary)' }}>
-            <div className="container">
-                <ScrollReveal>
-                    <h2 className="section-title">
-                        Skills & <span className="gradient-text">Technologies</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        Technologies I work with to build scalable, intelligent applications
+        <section id="skills" className="section-spacing bg-slate-950 relative">
+            <div className="container-width relative z-10">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl font-bold text-slate-100 mb-4">Technical Expertise</h2>
+                    <p className="text-slate-400 max-w-2xl mx-auto">
+                        My stack is focused on the Java ecosystem for the backend and modern JavaScript frameworks for the frontend, deployed on cloud infrastructure.
                     </p>
-                </ScrollReveal>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                    {skillCategories.map((category, categoryIndex) => (
-                        <ScrollReveal
-                            key={category.title}
-                            animation="fade-up"
-                            delay={categoryIndex * 150}
-                        >
-                            <div className="glass-card p-6 h-full card-hover">
-                                {/* Category Header */}
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div
-                                        className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
-                                        style={{
-                                            background: `linear-gradient(135deg, ${category.color}20 0%, ${category.color}10 100%)`,
-                                            border: `1px solid ${category.color}40`,
-                                        }}
-                                    >
-                                        {category.icon}
-                                    </div>
-                                    <h3
-                                        className="text-xl font-bold"
-                                        style={{ color: 'var(--text-primary)' }}
-                                    >
-                                        {category.title}
-                                    </h3>
-                                </div>
-
-                                {/* Skills List */}
-                                <div className="space-y-4">
-                                    {category.skills.map((skill, skillIndex) => (
-                                        <div key={skill.name} className="group">
-                                            <div className="flex justify-between items-center mb-1">
-                                                <span
-                                                    className="font-medium text-sm group-hover:text-white transition-colors"
-                                                    style={{ color: 'var(--text-secondary)' }}
-                                                >
-                                                    {skill.name}
-                                                </span>
-                                                <span
-                                                    className="text-xs"
-                                                    style={{ color: 'var(--text-muted)' }}
-                                                >
-                                                    {skill.level}%
-                                                </span>
-                                            </div>
-                                            <div
-                                                className="h-2 rounded-full overflow-hidden"
-                                                style={{ background: 'var(--bg-tertiary)' }}
-                                            >
-                                                <div
-                                                    className="h-full rounded-full transition-all duration-1000 ease-out"
-                                                    style={{
-                                                        width: `${skill.level}%`,
-                                                        background: `linear-gradient(90deg, ${category.color} 0%, ${category.color}80 100%)`,
-                                                        boxShadow: `0 0 10px ${category.color}40`,
-                                                        animationDelay: `${skillIndex * 100}ms`,
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    ))}
                 </div>
 
-                {/* Tech Stack Badges */}
-                <ScrollReveal animation="fade-up" delay={600}>
-                    <div className="mt-12 text-center">
-                        <p
-                            className="text-sm mb-6"
-                            style={{ color: 'var(--text-muted)' }}
+                <div className="grid md:grid-cols-2 gap-6">
+                    {skillCategories.map((category, index) => (
+                        <div
+                            key={index}
+                            className="card-base p-8 hover:bg-slate-900/80 group"
                         >
-                            Also experienced with
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-3">
-                            {['Git', 'GitHub Actions', 'Maven', 'Gradle', 'JUnit', 'Mockito', 'Hibernate', 'JPA', 'Linux', 'Nginx', 'Redis'].map((tech) => (
-                                <span key={tech} className="skill-badge">
-                                    {tech}
-                                </span>
-                            ))}
+                            <div className="flex items-start justify-between mb-6">
+                                <div>
+                                    <h3 className="text-xl font-bold text-slate-200 mb-2 flex items-center gap-2">
+                                        {category.title}
+                                    </h3>
+                                    <p className="text-sm text-slate-400">{category.description}</p>
+                                </div>
+                                <span className="text-2xl opacity-50 grayscale group-hover:grayscale-0 transition-all">{category.icon}</span>
+                            </div>
+
+                            <div className="flex flex-wrap gap-2">
+                                {category.skills.map((skill) => (
+                                    <span
+                                        key={skill}
+                                        className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-md border border-slate-700 transition-colors cursor-default"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </ScrollReveal>
+                    ))}
+                </div>
             </div>
         </section>
     );
