@@ -5,10 +5,32 @@ export default function Contact() {
     <section id="contact" className="section-spacing bg-slate-950">
       <div className="container-width max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-100 mb-4">Connect With Me</h2>
-          <p className="text-slate-400">
-            I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          <h2 className="text-3xl font-bold text-slate-100 mb-4">Let's Build Together</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            I'm passionate about creating impactful solutions and always excited to collaborate with
+            fellow developers and innovators.
           </p>
+        </div>
+
+        <div className="card-base p-6 mb-10">
+          <h3 className="text-lg font-semibold text-slate-200 mb-4 text-center">
+            I'm Looking to Collaborate On
+          </h3>
+          <ul className="grid gap-3 md:grid-cols-2 text-sm text-slate-400">
+            {[
+              'Full-stack projects with Java/Spring and Angular/React',
+              'Cloud-native systems and microservices',
+              'AI-powered applications (semantic search, RAG, LLM integrations)',
+              'Open source contributions that help developers',
+              'Scalable web apps with high-traffic needs',
+              'Backend architecture and performance optimization',
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="text-brand-primary mt-1">-</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -50,7 +72,7 @@ export default function Contact() {
         <div className="mt-16 text-center">
           <h3 className="text-xl font-bold text-slate-200 mb-6">Preferred Stack</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Java', 'Spring Boot', 'AWS', 'Angular'].map((tech) => (
+            {['Java', 'Spring Boot', 'AWS', 'Azure', 'Angular', 'React'].map((tech) => (
               <span
                 key={tech}
                 className="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-brand-primary rounded-full border border-slate-800 hover:border-brand-primary/30 transition-all cursor-default"
