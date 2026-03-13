@@ -16,10 +16,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#about', label: 'About' },
-    { href: '#learning', label: 'Learning' },
+    { href: '#updates', label: 'Updates' },
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
-    { href: '#timeline', label: 'Journey' },
     { href: '#contact', label: 'Contact' },
   ];
 

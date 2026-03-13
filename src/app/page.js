@@ -3,11 +3,9 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import LearningUpdates from './components/LearningUpdates';
+import Updates from './components/Updates';
 import Skills from './components/Skills';
-import Mission from './components/Mission';
 import Projects from './components/Projects';
-import GitHubAnalytics from './components/GitHubAnalytics';
 import Timeline from './components/Timeline';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -25,11 +23,9 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <LearningUpdates />
+        <Updates />
         <Skills />
-        <Mission />
         <Projects />
-        <GitHubAnalytics />
         <Timeline />
         <Contact />
       </main>
