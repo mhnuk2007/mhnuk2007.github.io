@@ -111,10 +111,7 @@ export default function RootLayout({ children }) {
   return (
       <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
-        <meta
-            name="google-site-verification"
-            content="XxlM4WYjht7yWIOupK_FfJ-69vi7BhFQc8aaYk-kKyY"
-        />
+        <meta name="google-site-verification" content="FnXRJrpYWUOKEGQf-TpANDLnT_0UfpmEku4nQHY3z8E" />
         <meta name="theme-color" content="#020617" />
         <link rel="icon" href="/favicon.ico" />
 
