@@ -1,3 +1,18 @@
+import { Inter, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata = {
   metadataBase: new URL("https://mhnuk2007.github.io"),
 
@@ -78,3 +93,44 @@ export const metadata = {
     },
   },
 };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mohan Lal",
+  url: "https://mhnuk2007.github.io/",
+  image: "https://mhnuk2007.github.io/myphoto.png",
+  sameAs: [
+    "https://github.com/mhnuk2007",
+    "https://www.linkedin.com/in/mhnuk2007/",
+  ],
+  jobTitle: "Java Full-Stack Developer",
+};
+
+export default function RootLayout({ children }) {
+  return (
+      <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <meta
+            name="google-site-verification"
+            content="XxlM4WYjht7yWIOupK_FfJ-69vi7BhFQc8aaYk-kKyY"
+        />
+        <meta name="theme-color" content="#020617" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(jsonLd),
+            }}
+        />
+      </head>
+
+      <body
+          className={`${inter.variable} ${jetbrainsMono.variable} bg-slate-950 text-slate-200`}
+      >
+      {children}
+      </body>
+      </html>
+  );
+}
