@@ -2,25 +2,39 @@
 
 export default function Footer() {
   return (
-    <footer className="py-8 bg-slate-950 border-t border-slate-900">
-      <div className="container-width flex flex-col md:flex-row items-center justify-between gap-6">
+      <footer className="py-8 bg-slate-950 border-t border-slate-900">
+        <div className="container-width flex flex-col md:flex-row items-center justify-between gap-6">
+          <a
+              href="#"
+              className="flex items-center gap-4 group"
+              onClick={(event) => {
+                event.preventDefault();
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+              }}
+          >
+            <img
+                src="/logo.svg"
+                alt="Mohan Lal"
+                className="h-9 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            />
 
-        <div className="flex items-center gap-4">
-          {/* Footer Logo */}
-          <img src="/logo.svg" alt="ML" className="h-8 w-auto opacity-80" />
+            <div className="h-7 w-px bg-slate-800" />
 
-          <div className="h-6 w-px bg-slate-800"></div>
+            <div>
+              <p className="font-semibold text-slate-200">Mohan Lal</p>
+              <p className="text-xs text-slate-500 mt-1">
+                Java Full-Stack Developer
+              </p>
+            </div>
+          </a>
 
-          <div className="flex flex-col">
-            <span className="font-bold text-slate-200 leading-none">Mohan Lal</span>
-            <span className="text-xs text-slate-500 mt-1">Full Stack Engineer</span>
-          </div>
+          <p className="text-sm text-slate-500 text-center">
+            © {new Date().getFullYear()} Mohan Lal. Built with Next.js.
+          </p>
         </div>
-
-        <div className="text-sm text-slate-500">
-          (c) {new Date().getFullYear()} All rights reserved.
-        </div>
-      </div>
-    </footer>
+      </footer>
   );
 }
