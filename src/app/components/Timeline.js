@@ -2,87 +2,115 @@
 
 import ScrollReveal from './ScrollReveal';
 
-export default function Timeline() {
-    const milestones = [
-        {
-            year: '2023',
-            title: 'AWS Emerging Talent Community',
-            description: 'Recognized as a member of the AWS Emerging Talent Community, marking my commitment to cloud-native development.'
-        },
-        {
-            year: '2023',
-            title: 'Exploring AI & Semantic Search',
-            description: 'Deep-dived into embeddings, vector databases (pgvector), and building RAG systems with Spring AI.'
-        },
-        {
-            year: '2022',
-            title: 'Microservices Architecture',
-            description: 'Mastered building distributed systems with Spring Boot, Docker, and Kubernetes. Deployed first production microservices.'
-        },
-        {
-            year: '2022',
-            title: 'Cloud Journey Begins',
-            description: 'Started learning AWS and Azure cloud services. Built first serverless applications and embraced Infrastructure as Code.'
-        },
-        {
-            year: '2021',
-            title: 'Full-Stack Development',
-            description: 'Expanded skills to frontend development with Angular. Built complete end-to-end applications.'
-        },
-        {
-            year: '2020',
-            title: 'Backend Development Focus',
-            description: 'Deep expertise in Java and Spring Boot. Built RESTful APIs, worked with databases, and understood enterprise patterns.'
-        },
-        {
-            year: '2019',
-            title: 'The Beginning',
-            description: 'Started my self-taught programming journey with Java. Wrote my first lines of code and fell in love with problem-solving.'
-        },
-    ];
+const milestones = [
+    {
+        period: '2025',
+        title: 'Focused on Java & Backend Development',
+        description:
+            'Committed to a Java-centered learning path, strengthening core Java, object-oriented programming, Spring Boot, databases, REST APIs, and backend development fundamentals.',
+    },
+    {
+        period: '2025',
+        title: 'Building Full-Stack Applications',
+        description:
+            'Expanded into full-stack development by combining Spring Boot services with modern frontend technologies including React, Next.js, TypeScript, and Tailwind CSS.',
+    },
+    {
+        period: '2026',
+        title: 'Data Structures & Algorithms',
+        description:
+            'Developed a structured problem-solving routine using LeetCode, with continued practice across dynamic programming, trees, graphs, sliding window, binary search, and other patterns.',
+    },
+    {
+        period: '2026',
+        title: 'Cloud, Containers & Infrastructure',
+        description:
+            'Deepened practical knowledge of Docker, Kubernetes, Terraform, AWS concepts, PostgreSQL, and local cloud environments while building and deploying backend-focused projects.',
+    },
+    {
+        period: '2026',
+        title: 'Jakarta EE & Enterprise Java',
+        description:
+            'Started a structured journey into Jakarta EE and enterprise Java technologies, exploring APIs, specifications, architecture, and the wider Java ecosystem.',
+    },
+    {
+        period: '2026',
+        title: 'Open Source Contributions',
+        description:
+            'Began contributing to Eclipse JNoSQL by investigating issues, creating reproducible tests, implementing fixes, and participating in technical discussions through pull requests.',
+    },
+    {
+        period: 'Now',
+        title: 'Continuing to Build',
+        description:
+            'Focused on becoming a stronger Java full-stack engineer through open source, system design, backend architecture, cloud-native development, and consistent hands-on practice.',
+    },
+];
 
+export default function Timeline() {
     return (
         <section id="timeline" className="section-spacing bg-slate-950">
             <div className="container-width">
                 <ScrollReveal>
-                    <h2 className="text-3xl font-bold text-slate-100 text-center mb-16">
-                        My Journey
-                    </h2>
+                    <div className="text-center max-w-2xl mx-auto mb-16">
+                        <p className="text-sm font-medium text-brand-primary mb-3">
+                            LEARNING JOURNEY
+                        </p>
+
+                        <h2 className="text-3xl font-bold text-slate-100 mb-4">
+                            My Journey So Far
+                        </h2>
+
+                        <p className="text-slate-400 leading-relaxed">
+                            A practical, hands-on journey from learning Java fundamentals to
+                            building full-stack applications and contributing to open-source
+                            software.
+                        </p>
+                    </div>
                 </ScrollReveal>
 
                 <div className="relative max-w-4xl mx-auto">
-                    {/* Vertical Line */}
-                    <div className="absolute left-[20px] md:left-[50%] top-0 bottom-0 w-px bg-slate-800 md:-translate-x-1/2" />
+                    <div className="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-px bg-slate-800 md:-translate-x-1/2" />
 
                     <div className="space-y-12">
                         {milestones.map((item, index) => (
-                            <ScrollReveal key={index} animation="fade-up" delay={index * 100}>
-                                <div className={`relative flex flex-col md:flex-row gap-8 md:gap-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-
-                                    {/* Timeline Dot */}
-                                    <div className="absolute left-[20px] md:left-1/2 w-10 h-10 md:-translate-x-1/2 flex items-center justify-center z-10">
-                                        <div className="w-4 h-4 rounded-full bg-brand-primary ring-4 ring-slate-950 shadow-lg shadow-brand-primary/50" />
+                            <ScrollReveal
+                                key={`${item.period}-${item.title}`}
+                                animation="fade-up"
+                                delay={Math.min(index * 80, 400)}
+                            >
+                                <div
+                                    className={`relative flex flex-col md:flex-row ${
+                                        index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                                    }`}
+                                >
+                                    <div className="absolute left-0 md:left-1/2 top-0 w-10 h-10 md:-translate-x-1/2 flex items-center justify-center z-10">
+                                        <div className="w-4 h-4 rounded-full bg-brand-primary ring-4 ring-slate-950 shadow-lg shadow-brand-primary/30" />
                                     </div>
 
-                                    {/* Content Card */}
-                                    <div className="ml-12 md:ml-0 md:w-1/2 md:px-12">
-                                        <div className={`group ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                                            <span className="inline-block px-3 py-1 rounded-full text-xs font-mono font-bold mb-3 bg-slate-900 border border-slate-800 text-brand-primary">
-                                                {item.year}
-                                            </span>
+                                    <div className="ml-14 md:ml-0 md:w-1/2 md:px-12">
+                                        <div
+                                            className={
+                                                index % 2 === 0
+                                                    ? 'md:text-left'
+                                                    : 'md:text-right'
+                                            }
+                                        >
+                      <span className="inline-flex px-3 py-1 rounded-full text-xs font-mono font-medium mb-3 bg-slate-900 border border-slate-800 text-brand-primary">
+                        {item.period}
+                      </span>
 
-                                            <h3 className="text-xl font-bold mb-2 text-slate-200 group-hover:text-brand-primary transition-colors">
+                                            <h3 className="text-xl font-bold text-slate-200 mb-3">
                                                 {item.title}
                                             </h3>
 
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <p className="text-sm text-slate-400 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>
                                     </div>
 
-                                    {/* Spacer/Icon (Optional Visual Balance) */}
-                                    <div className="hidden md:flex md:w-1/2 items-center justify-center opacity-0"></div>
+                                    <div className="hidden md:block md:w-1/2" />
                                 </div>
                             </ScrollReveal>
                         ))}
