@@ -28,11 +28,11 @@ export default function Contact() {
             </p>
 
             <h2 className="text-3xl font-bold text-slate-100 mb-4">
-              Let's Connect
+              Let&apos;s Connect
             </h2>
 
             <p className="text-slate-400 leading-relaxed">
-              I'm open to connecting with developers, collaborating on
+              I&apos;m open to connecting with developers, collaborating on
               open-source projects, discussing Java and backend engineering, and
               exploring relevant software development opportunities.
             </p>
