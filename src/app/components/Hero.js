@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -53,7 +55,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-3 text-slate-500">
+            <div className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-3 text-slate-400">
               <span className="text-sm font-medium">Java / Spring Boot</span>
               <span className="text-sm font-medium">Cloud & DevOps</span>
               <span className="text-sm font-medium">React / Next.js</span>
@@ -72,13 +74,17 @@ export default function Hero() {
 
               {/* Image */}
               <div className="relative w-full h-full rounded-2xl rotate-3 overflow-hidden shadow-2xl bg-slate-900 border border-slate-800 transition-transform duration-500 group-hover:rotate-0">
-                <img
+                <Image
                   src="/myphoto.png"
                   alt="Mohan Lal"
+                  width={384}
+                  height={384}
+                  priority
+                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
                   className="w-full h-full object-cover grayscale-0 hover:grayscale-[0.2] transition-all duration-500"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
             </div>
           </div>

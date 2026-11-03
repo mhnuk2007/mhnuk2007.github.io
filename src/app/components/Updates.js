@@ -45,59 +45,59 @@ const updates = [
 
 export default function Updates() {
   return (
-      <section
-          id="updates"
-          className="section-spacing bg-slate-950 border-t border-slate-900"
-      >
-        <div className="container-width">
+    <section
+      id="updates"
+      className="section-spacing bg-slate-950 border-t border-slate-900"
+    >
+      <div className="container-width">
 
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-100 mb-4">
-              Recent Updates
-            </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-slate-100 mb-4">
+            Recent Updates
+          </h2>
 
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              A snapshot of what I am currently learning, building, and
-              contributing to across the Java and cloud-native ecosystem.
-            </p>
-          </div>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            A snapshot of what I am currently learning, building, and
+            contributing to across the Java and cloud-native ecosystem.
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {updates.map((item) => (
-                <article
-                    key={item.title}
-                    className="card-base p-8 flex flex-col h-full hover:bg-slate-900/80 transition-colors"
-                >
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <h3 className="text-xl font-bold text-slate-200">
-                      {item.title}
-                    </h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          {updates.map((item) => (
+            <article
+              key={item.title}
+              className="card-base p-8 flex flex-col h-full hover:bg-slate-900/80 transition-colors"
+            >
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <h3 className="text-xl font-bold text-slate-200">
+                  {item.title}
+                </h3>
 
-                    <span className="text-xs font-mono text-slate-500 shrink-0">
+                <span className="text-xs font-mono text-slate-400 shrink-0">
                   {item.date}
                 </span>
-                  </div>
+              </div>
 
-                  <p className="text-sm text-slate-400 leading-relaxed mb-6">
-                    {item.description}
-                  </p>
+              <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                {item.description}
+              </p>
 
-                  <div className="mt-auto">
-                    <a
-                        href={item.url || `https://github.com/mhnuk2007/${item.repo}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary hover:text-indigo-400 transition-colors"
-                    >
-                      {item.repoLabel}
-                      <span>-&gt;</span>
-                    </a>
-                  </div>
-                </article>
-            ))}
-          </div>
-
+              <div className="mt-auto">
+                <a
+                  href={item.url || `https://github.com/mhnuk2007/${item.repo}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary hover:text-indigo-400 transition-colors"
+                >
+                  {item.repoLabel}
+                  <span>-&gt;</span>
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
-      </section>
+
+      </div>
+    </section>
   );
 }

@@ -109,13 +109,12 @@ export default function Projects() {
             </span>
 
             <h2 className="text-3xl font-bold text-slate-100 mt-3 mb-4">
-              Projects & Open Source
+              Featured Projects
             </h2>
 
             <p className="text-slate-400 leading-relaxed">
               A selection of my major projects, long-term engineering work,
-              algorithm practice, cloud infrastructure projects, and open-source
-              contributions.
+              cloud infrastructure, and civic technology platforms.
             </p>
           </div>
 
@@ -156,9 +155,19 @@ export default function Projects() {
                   </svg>
                 </div>
 
-                <span className="text-xs text-brand-primary bg-brand-primary/10 px-2.5 py-1 rounded-full">
-                  {project.category}
-                </span>
+                {project.isPrivate ? (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                    </span>
+                    Live Production
+                  </span>
+                ) : (
+                  <span className="text-xs text-brand-primary bg-brand-primary/10 px-2.5 py-1 rounded-full border border-brand-primary/20">
+                    {project.category}
+                  </span>
+                )}
               </div>
 
               <h3 className="text-lg font-bold text-slate-200 mb-3 group-hover:text-brand-primary transition-colors">
@@ -173,7 +182,7 @@ export default function Projects() {
                 {project.technologies.map((technology) => (
                   <span
                     key={technology}
-                    className="text-xs text-slate-400 bg-slate-900 border border-slate-800 px-2 py-1 rounded-md"
+                    className="text-xs text-slate-300 bg-slate-900 border border-slate-800 px-2 py-1 rounded-md"
                   >
                     {technology}
                   </span>
@@ -181,15 +190,15 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-800/50">
-                <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
+                <span className="text-xs font-mono text-slate-400 flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500" />
                   {project.language || 'Code'}
                 </span>
 
-                <span className="text-xs font-medium text-slate-400 group-hover:text-brand-primary transition-colors flex items-center gap-1">
-                  {project.isPrivate ? 'Live Application' : 'View Source'}
+                <span className="text-xs font-medium text-slate-300 group-hover:text-brand-primary transition-colors flex items-center gap-1.5">
+                  {project.isPrivate ? 'Launch Application' : 'View Source'}
                   <svg
-                    className="w-3 h-3"
+                    className="w-3.5 h-3.5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -208,9 +217,8 @@ export default function Projects() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-sm text-slate-500">
-            These are selected projects from my work and open-source
-            contributions. More repositories are available on GitHub.
+          <p className="text-sm text-slate-400">
+            These are selected projects from my work and engineering practice. More repositories are available on GitHub.
           </p>
         </div>
       </div>
