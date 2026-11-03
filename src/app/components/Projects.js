@@ -11,7 +11,8 @@ const FEATURED_PROJECTS = [
     featuredDescription:
       'An authoritative civic technology analytical compendium for the College Education Department, Government of Sindh. Manages 8,978 validated records across 24 categories, 390+ public degree colleges, 6 regional directorates, interactive retirement calendars, and statutory pension/pay calculators.',
     technologies: ['Next.js 16', 'TypeScript', 'React 19', 'Tailwind CSS', 'Vitest'],
-    html_url: 'https://github.com/mhnuk2007/seniorityportal',
+    html_url: 'https://seniorityportal.mhnuk2007.tech/',
+    isPrivate: true,
     language: 'TypeScript'
   },
   {
@@ -186,7 +187,7 @@ export default function Projects() {
                 </span>
 
                 <span className="text-xs font-medium text-slate-400 group-hover:text-brand-primary transition-colors flex items-center gap-1">
-                  View Source
+                  {project.isPrivate ? 'Live Application' : 'View Source'}
                   <svg
                     className="w-3 h-3"
                     fill="none"

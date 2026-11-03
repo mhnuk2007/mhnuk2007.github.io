@@ -6,8 +6,8 @@ const updates = [
     date: '2026',
     description:
         'Engineered an authoritative civic technology platform in Next.js 16, TypeScript, and Tailwind CSS for the College Education Department, managing 8,978 validated records across 24 categories, 390+ colleges, and 6 regional directorates.',
-    repo: 'seniorityportal',
-    repoLabel: 'Seniority Portal Repository',
+    url: 'https://seniorityportal.mhnuk2007.tech/',
+    repoLabel: 'Visit Live Seniority Portal',
   },
   {
     title: 'Eclipse JNoSQL Open Source',
@@ -84,7 +84,7 @@ export default function Updates() {
 
                   <div className="mt-auto">
                     <a
-                        href={`https://github.com/mhnuk2007/${item.repo}`}
+                        href={item.url || `https://github.com/mhnuk2007/${item.repo}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary hover:text-indigo-400 transition-colors"
