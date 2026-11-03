@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Updates from './components/Updates';
 import Skills from './components/Skills';
+import OpenSource from './components/OpenSource';
+import LeetCode from './components/LeetCode';
 import Projects from './components/Projects';
 import Timeline from './components/Timeline';
 import Contact from './components/Contact';
@@ -25,6 +27,8 @@ export default function Home() {
         <About />
         <Updates />
         <Skills />
+        <OpenSource />
+        <LeetCode />
         <Projects />
         <Timeline />
         <Contact />

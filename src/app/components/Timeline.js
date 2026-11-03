@@ -40,6 +40,12 @@ const milestones = [
             'Began contributing to Eclipse JNoSQL by investigating issues, creating reproducible tests, implementing fixes, and participating in technical discussions through pull requests.',
     },
     {
+        period: '2026',
+        title: 'Civic Technology Architecture',
+        description:
+            'Architected and deployed the College Teachers Seniority Portal, an authoritative civic technology platform managing 8,978 validated records, 390+ public colleges, and statutory retirement/pension engines with Next.js 16 and TypeScript.',
+    },
+    {
         period: 'Now',
         title: 'Continuing to Build',
         description:

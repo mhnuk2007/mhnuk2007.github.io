@@ -2,6 +2,14 @@
 
 const updates = [
   {
+    title: 'College Teachers Seniority Portal',
+    date: '2026',
+    description:
+        'Engineered an authoritative civic technology platform in Next.js 16, TypeScript, and Tailwind CSS for the College Education Department, managing 8,978 validated records across 24 categories, 390+ colleges, and 6 regional directorates.',
+    repo: 'seniorityportal',
+    repoLabel: 'Seniority Portal Repository',
+  },
+  {
     title: 'Eclipse JNoSQL Open Source',
     date: '2026',
     description:

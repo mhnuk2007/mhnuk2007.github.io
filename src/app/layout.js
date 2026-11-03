@@ -17,12 +17,12 @@ export const metadata = {
   metadataBase: new URL("https://mhnuk2007.github.io"),
 
   title: {
-    default: "Mohan Lal | Java Full-Stack Developer | Spring Boot",
+    default: "Mohan Lal | Java Full Stack Developer",
     template: "%s | Mohan Lal",
   },
 
   description:
-      "Mohan Lal is a Java Full-Stack Developer specializing in Java, Spring Boot, microservices, Jakarta EE, Jakarta NoSQL, cloud-native applications, Docker, Kubernetes, AWS, and AI-powered applications.",
+      "Mohan Lal is a Java Full Stack Developer specializing in Java, Spring Boot, microservices, Jakarta EE, cloud-native backend systems, and open-source contributions.",
 
   keywords: [
     "Mohan Lal",
@@ -68,7 +68,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://mhnuk2007.github.io/",
-    title: "Mohan Lal | Java Full-Stack Developer | Spring Boot",
+    title: "Mohan Lal | Java Full Stack Developer",
     description:
         "Java, Spring Boot, microservices, Jakarta EE, cloud-native development, and open-source contributions.",
     siteName: "Mohan Lal",
@@ -76,7 +76,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Mohan Lal | Java Full-Stack Developer",
+    title: "Mohan Lal | Java Full Stack Developer",
     description:
         "Java, Spring Boot, microservices, Jakarta EE, cloud-native development, and open-source contributions.",
   },
@@ -96,15 +96,39 @@ export const metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Mohan Lal",
-  url: "https://mhnuk2007.github.io/",
-  image: "https://mhnuk2007.github.io/myphoto.png",
-  sameAs: [
-    "https://github.com/mhnuk2007",
-    "https://www.linkedin.com/in/mhnuk2007/",
-  ],
-  jobTitle: "Java Full-Stack Developer",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://mhnuk2007.github.io/#person",
+      name: "Mohan Lal",
+      url: "https://mhnuk2007.github.io/",
+      image: "https://mhnuk2007.github.io/myphoto.png",
+      jobTitle: "Java Full Stack Developer",
+      sameAs: [
+        "https://github.com/mhnuk2007",
+        "https://www.linkedin.com/in/mhnuk2007/",
+      ],
+      knowsAbout: [
+        "Java",
+        "Spring Boot",
+        "Jakarta EE",
+        "Microservices",
+        "PostgreSQL",
+        "Next.js",
+        "Docker",
+        "Open Source Software"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mhnuk2007.github.io/#website",
+      url: "https://mhnuk2007.github.io/",
+      name: "Mohan Lal | Java Full Stack Developer",
+      publisher: {
+        "@id": "https://mhnuk2007.github.io/#person"
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
