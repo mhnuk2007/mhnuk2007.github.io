@@ -5,6 +5,17 @@ const GITHUB_USERNAME = 'mhnuk2007';
 const FEATURED_PROJECTS = [
   {
     owner: 'mhnuk2007',
+    repo: 'finsim',
+    title: 'FinSim — Financial Network Simulator',
+    category: 'Flagship Distributed Systems Project',
+    featuredDescription:
+      'An open-source distributed financial network simulator connecting independent participant services (banks, merchants, gateways), orchestrating payment state machines with UNKNOWN, enforcing strict idempotency, and injecting deterministic distributed systems failures.',
+    technologies: ['Java 21', 'Spring Boot 3', 'Spring Modulith', 'PostgreSQL 17', 'Flyway', 'Testcontainers', 'Docker'],
+    html_url: 'https://github.com/mhnuk2007/finsim',
+    language: 'Java'
+  },
+  {
+    owner: 'mhnuk2007',
     repo: 'seniorityportal',
     title: 'College Teachers Seniority & Retirement Portal',
     category: 'Flagship Civic Tech Project',
